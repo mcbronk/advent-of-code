@@ -9,15 +9,12 @@ var result = 0;
 for (let index = 0; index <= dat.length; index++) {
    
     if(!isNaN(parseInt(dat[index]))) {
-        highest += parseInt(dat[index]);
-       
-       
+        highest += parseInt(dat[index]);          
     }  else {
         values.push(highest);
         highest = 0;
     }
 }
-
 //Finding the highest
 for (let index = 0; index <= values.length; index++) {
        
@@ -25,7 +22,6 @@ for (let index = 0; index <= values.length; index++) {
         result = values[index];
     }   
 }
-
 //Sort array
 for (let i = 0; i < values.length; i++) {
 
@@ -37,13 +33,12 @@ for (let i = 0; i < values.length; i++) {
             values[i] = next;
             values[j] = prev;
         }
-    }
-    
+    }    
 }
+
 
 //sum the three highest.
 result = values[0] + values[1] + values[2];
-
 //answer
 console.log(result);
 

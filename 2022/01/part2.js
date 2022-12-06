@@ -25,7 +25,7 @@ for (let index = 0; index <= values.length; index++) {
 //Sort array
 for (let i = 0; i < values.length; i++) {
 
-    for (let j = 0; j< values.length; j++) {
+    for (let j = 0; j < values.length; j++) {
         const prev = values[i];
         const next = values[j];
         if(values[i] > values[j]) {
@@ -39,6 +39,6 @@ for (let i = 0; i < values.length; i++) {
 
 //sum the three highest.
 result = values[0] + values[1] + values[2];
-//answer
+//answer 296780
 console.log(result);
 

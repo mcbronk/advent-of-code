@@ -20,5 +20,7 @@ for (let index = 0; index <= values.length; index++) {
         result = values[index];
     }   
 }
+
+//69626
 console.log(result);
 

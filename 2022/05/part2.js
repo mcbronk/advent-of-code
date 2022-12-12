@@ -29,7 +29,7 @@ for (let i = 0; i < data.length; i++) {
 
     let movedCargo = cargo[from].splice(startPosition,endPosition); //The array we want to move to the other
    
-    //Iterate through the movedcargos and push the cargo to the other cargo.
+    //Iterate through the moved cargos and push the cargo to the other cargo.
    movedCargo.forEach(element => {
        cargo[to].push(element);
    }); 

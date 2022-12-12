@@ -27,8 +27,6 @@ for (let i = 0; i < data.length; i++) {
     const from = parseInt(text[3] - 1);
     const to = parseInt(text[5] - 1);
 
-    let x = cargo[from].length;
-    
     for(let a = move - 1; a >= 0 ; a--) {
         let idx = cargo[from].length - 1;
         cargo[to].push(cargo[from][idx]);
@@ -44,4 +42,3 @@ cargo.forEach(element => {
 
 // Result: VJSFHWGFT
 console.log("Asnwer: " + answer);
-//console.log(cargo);

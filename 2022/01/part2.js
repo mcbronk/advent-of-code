@@ -36,7 +36,6 @@ for (let i = 0; i < values.length; i++) {
     }    
 }
 
-
 //sum the three highest.
 result = values[0] + values[1] + values[2];
 //answer 296780

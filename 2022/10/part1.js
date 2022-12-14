@@ -7,7 +7,7 @@ const data = fs.readFileSync("input.txt", { encoding: "utf-8" })
   let cycle = 0;
   let score = 0;
   let value = 1;
-  //let res2 = "";
+
   for (let i = 0; i < data.length; i++) {  
      const h = data[i].split(' ');
     if(h[0] == "noop") {

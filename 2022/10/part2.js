@@ -5,7 +5,6 @@ const data = fs.readFileSync("input.txt", { encoding: "utf-8" })
   .split("\n"); 
 
   let cycle = 0;
- // let score = 0;
   let value = 1;
   let res2 = "";
 

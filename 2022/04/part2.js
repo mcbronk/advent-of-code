@@ -18,4 +18,4 @@ function createElf(start,end) {
 }
 
 //865
-console.log(cnt);
+console.log("Part 2: " + cnt);

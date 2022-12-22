@@ -17,4 +17,4 @@ function createElf(start,end) {
     return {"start": start, "end": end}
 }
 //466
-console.log(cnt);
+console.log("Part 1: " + cnt);

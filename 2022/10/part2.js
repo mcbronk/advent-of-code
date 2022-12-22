@@ -9,14 +9,14 @@ const data = fs.readFileSync("input.txt", { encoding: "utf-8" })
   let res2 = "";
 
   for (let i = 0; i < data.length; i++) {  
-    const h = data[i].split(' ');
-    if(h[0] == "noop") {
+    const x = data[i].split(' ');
+    if(x[0] == "noop") {
         runCycle();  
     }
-    if(h[0] == "addx") {
+    if(x[0] == "addx") {
         runCycle();
         runCycle();
-        value += Number(h[1]);     
+        value += Number(x[1]);     
     }      
   }
 
@@ -33,5 +33,5 @@ const data = fs.readFileSync("input.txt", { encoding: "utf-8" })
             res2 += "\n";
         } 
  }
-console.log("part2: ZCBAJFJZ");
+console.log("Part 2: ZCBAJFJZ");
 console.log(res2); //ZCBAJFJZ

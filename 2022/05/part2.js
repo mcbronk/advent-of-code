@@ -40,5 +40,4 @@ cargo.forEach(element => {
 });
 
 //Result: LCTQFBVZV
-console.log("Asnwer: " + answer);
-//console.log(cargo);
+console.log("Part2 : " + answer);

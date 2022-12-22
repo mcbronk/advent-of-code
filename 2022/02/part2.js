@@ -49,4 +49,4 @@ switch(opposite) {
 }
 }
 //13193
-console.log(score);
+console.log("Part 2: " + score);

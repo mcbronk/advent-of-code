@@ -55,4 +55,4 @@ switch(oppisite) {
 }
 }
 //12586
-console.log(score);
+console.log("Part 1: " + score);

@@ -16,4 +16,4 @@ for (let index = 0; index < data.length; index+= 3) {
    score += result.charCodeAt(0) - (result === result.toLowerCase() ? 96 : 38); 
 }
 
-console.log(score); //2413
+console.log("Part 2: " + score); //2413

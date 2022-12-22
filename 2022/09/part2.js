@@ -4,16 +4,16 @@ const data = fs.readFileSync("input.txt", { encoding: "utf-8" })
   .trim() 
   .split("\n"); 
 
-  class Point {
+  class Position {
     constructor(x, y) {
       this.x = x;
       this.y = y;
     }
 }
 
-knots = new Array(10).fill().map((_) => new Point(0,0));
+knots = new Array(10).fill().map((_) => new Position(0,0));
 const head = knots[0];
-const tailed = new Set();
+const tailedPositions = new Set();
 for (let i = 0; i < data.length; i++) {  
     let x = data[i].split(" ");
     while(x[1] -- > 0) {
@@ -27,7 +27,7 @@ for (let i = 0; i < data.length; i++) {
             followHead(knots[j], knots[j-1]);
         }
         const tail = knots[knots.length - 1]
-        tailed.add(`${tail.x}-${tail.y}`);
+        tailedPositions.add(`${tail.x}-${tail.y}`);
     }
 }
 
@@ -57,4 +57,4 @@ function followHead(tail,head) {
     }  
 }
 //2467
-console.log(tailed.size);
+console.log("Part 2: " + tailedPositions.size);

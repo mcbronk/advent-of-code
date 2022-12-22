@@ -22,5 +22,5 @@ for (let index = 0; index <= values.length; index++) {
 }
 
 //69626
-console.log(result);
+console.log("Part 1: " + result);
 

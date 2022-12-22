@@ -38,6 +38,6 @@ for (let i = 0; i < values.length; i++) {
 
 //sum the three highest.
 result = values[0] + values[1] + values[2];
-//answer 296780
-console.log(result);
+//answer 206780
+console.log("Part 2: " + result);
 

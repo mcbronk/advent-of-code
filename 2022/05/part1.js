@@ -41,4 +41,4 @@ cargo.forEach(element => {
 });
 
 // Result: VJSFHWGFT
-console.log("Asnwer: " + answer);
+console.log("Part1 : " + answer);

@@ -35,4 +35,4 @@ function checkDuplicate(string) {
 
 //Print final score
 //2383
-console.log(marker);
+console.log("Part 2 : " + marker);

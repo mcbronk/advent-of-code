@@ -19,11 +19,11 @@ for (let i = 0; i < x.length; i++)
             }
             else if (h[2] == "/")
             {
-                path.push(path.join('',path) + h[2]);
+               path.push(addPath());
             }
             else
-            {               
-                path.push(path.join('',path) + h[2]);
+            {           
+                path.push(addPath());
             }
         }
     } else if (h[0] != "dir") {
@@ -45,4 +45,8 @@ for(var key in map) {
         score += value;
     }
   }
-console.log("Result: " + score); //1306611
+  function addPath() {
+    let pathString = path.join('',path) + h[2];
+    return pathString;
+}
+console.log("Part 1: " + score); //1306611

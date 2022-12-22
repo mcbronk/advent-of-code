@@ -29,6 +29,6 @@ for(const x of set) {
 score += x.charCodeAt(0) - (x === x.toLowerCase() ? 96 : 38); 
 }
 
-console.log(score); //8394
+console.log("Part 1: " + score); //8394
 
 

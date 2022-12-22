@@ -9,15 +9,15 @@ const data = fs.readFileSync("input.txt", { encoding: "utf-8" })
   let value = 1;
 
   for (let i = 0; i < data.length; i++) {  
-     const h = data[i].split(' ');
-    if(h[0] == "noop") {
+     const x = data[i].split(' ');
+    if(x[0] == "noop") {
         runCycle();
        
     }
-    if(h[0] == "addx") {
+    if(x[0] == "addx") {
         runCycle();
         runCycle();
-        value += Number(h[1]);    
+        value += Number(x[1]);    
     }    
   }
   function runCycle() {

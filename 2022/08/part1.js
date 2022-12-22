@@ -1,23 +1,23 @@
 const fs = require('fs');
-const data = fs.readFileSync("input.txt", { encoding: "utf-8" }) 
+const input = fs.readFileSync("input.txt", { encoding: "utf-8" }) 
   .replace(/\r/g, "") 
   .trim() 
   .split("\n"); 
 
-  let test = data.map((x) => x.split('').map((x) => Number(x)));
-    let width = test[0].length;
-    let height = test.length;
+  let data = input.map((x) => x.split('').map((x) => Number(x)));
+    let width = data[0].length;
+    let height = data.length;
 
-var visibles = Array(width).fill(false).map(x => Array(height).fill(false))
+var visibleTrees = Array(width).fill(false).map(x => Array(height).fill(false))
 
 //from left
   for (let i = 0; i < height; i++) {
    let edge = -1
     for (let j = 0; j < width; j++) {
-       if(test[i][j] > edge) {
+       if(data[i][j] > edge) {
        
-           edge = test[i][j];
-           visibles[i][j] = true;
+           edge = data[i][j];
+           visibleTrees[i][j] = true;
        }
     }   
   }
@@ -27,9 +27,9 @@ var visibles = Array(width).fill(false).map(x => Array(height).fill(false))
   
     for (let j = width - 1; j >= 0 ; j--) {
      
-      if(test [i][j] > edge) {
-        edge = test[i][j];
-        visibles[i][j] = true;
+      if(data [i][j] > edge) {
+        edge = data[i][j];
+        visibleTrees[i][j] = true;
     }
     }
       
@@ -39,9 +39,9 @@ var visibles = Array(width).fill(false).map(x => Array(height).fill(false))
    let edge = -1
     for (let j = 0; j < height; j++) {
     
-        if(test[j][i] > edge) {
-            edge = test[j][i];
-            visibles[j][i] = true;
+        if(data[j][i] > edge) {
+            edge = data[j][i];
+            visibleTrees[j][i] = true;
         }
     }
   }
@@ -50,21 +50,21 @@ var visibles = Array(width).fill(false).map(x => Array(height).fill(false))
  for (let i = 0; i < width; i++) {
     let edge = -1
     for (let j = height - 1 ; j >= 0; j--) {
-        if(test [j][i] > edge ) {
-            edge = test[j][i];
-            visibles[j][i] = true;
+        if(data [j][i] > edge ) {
+            edge = data[j][i];
+            visibleTrees[j][i] = true;
         }
     }
   }
-let output = 0;
- for (let i = 0; i < visibles[0].length; i++) {
-  for (let j = 0; j < visibles.length; j++) {
-    if(visibles[i][j])
-    output ++;
+let result = 0;
+ for (let i = 0; i < visibleTrees[0].length; i++) {
+  for (let j = 0; j < visibleTrees.length; j++) {
+    if(visibleTrees[i][j])
+    result ++;
   }   
  }
 
- console.log(output); //1538
+ console.log("Part1: " + result); //1538
 
 
  

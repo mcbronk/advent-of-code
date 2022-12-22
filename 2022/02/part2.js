@@ -11,7 +11,6 @@ dat.forEach(element => {
 });
 
 for (let index = 0; index < game.length; index++) {
- //   console.log(game[index][0]);
     calcScore(game[index][0],game[index][1])
    
 }
